@@ -11,12 +11,12 @@ namespace Shop_Homework
         {
 
         }
-        public static int Buy(int cupQuantity, int amountOfBuying)
+        public  int Buy(int cupQuantity, int amountOfBuying)
         {
             int result = cupQuantity - amountOfBuying;
             return result;
         }
-        public static void CommandPrep(ref int amountOfBuying, ref string pureString)
+        public  void CommandPrep(ref int amountOfBuying, ref string pureString)
         {
             var isTrue = true;
 
@@ -46,6 +46,10 @@ namespace Shop_Homework
             }
 
 
+
+        }
+        public  void EvaluationOfQuantities()
+        {
 
         }
     }

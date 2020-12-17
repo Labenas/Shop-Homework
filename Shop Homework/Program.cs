@@ -12,23 +12,18 @@ namespace Shop_Homework
             string pureString = "a";
 
             var cup = new Cup();
+            var shop = new Shop();
+
             cup.PrintCommands();
             cup.List();
 
-            
-            
-
             do
             {
-
-                    //getting command + value of items 
-                    Shop.CommandPrep(ref amountOfBuying, ref pureString);
-                   
-                    //Controler of Entry
+                    shop.CommandPrep(ref amountOfBuying, ref pureString);
 
                     if (pureString == "buycup" || pureString == "cupbuy")
                     {
-                        cup.Quantity = Shop.Buy(cup.Quantity, amountOfBuying);
+                        cup.Quantity = shop.Buy(cup.Quantity, amountOfBuying);
                         cup.List();
                         cup.PrintCommandsShort();
                         Console.WriteLine("press Esc to quit console\n");
