@@ -7,14 +7,34 @@ using System.Text.RegularExpressions;
 namespace Shop_Homework
 {
     class Shop
-    {   public Shop()
+    {   
+        public Shop()
         {
-
+            
         }
-        public  int Buy(int cupQuantity, int amountOfBuying)
+        public  void Buy(int cupQuantity, int amountOfBuying,int Balance,int CupPrice,ref int newBalance,ref int newCupQuantity)
         {
-            int result = cupQuantity - amountOfBuying;
-            return result;
+           
+            int wantToBuy = amountOfBuying * CupPrice;
+            
+
+            if (wantToBuy>Balance)
+            {
+                Console.WriteLine($"You want to buy more than you can! Add more into your account using Add\n");
+            }
+            else if(cupQuantity - amountOfBuying < 0)
+            {
+                Console.WriteLine("\t\t\tYou want buy more than we can offer at the moment.Sorry.\n");
+                newBalance = Balance;
+                newCupQuantity = cupQuantity;
+            }
+            else
+            {
+                newBalance = Balance - wantToBuy;
+                newCupQuantity = cupQuantity - amountOfBuying;
+            }
+            
+
         }
         public  void CommandPrep(ref int amountOfBuying, ref string pureString)
         {
@@ -34,7 +54,7 @@ namespace Shop_Homework
 
                 if (!amountString.Any())
                 {
-                    Console.WriteLine("Missing amount of items you would like to buy");
+                    Console.WriteLine("\t\t\tMissing entry amount of items you would like to buy\n\n");
                     break;
                 }
                 else
@@ -52,5 +72,7 @@ namespace Shop_Homework
         {
 
         }
+      
     }
+    
 }

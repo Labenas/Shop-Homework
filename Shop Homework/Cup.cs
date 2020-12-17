@@ -21,9 +21,9 @@ namespace Shop_Homework
         {
             if (Quantity>1) 
             { 
-            Console.WriteLine($"Cup Name is {Name}");
+            Console.WriteLine($"\nCup Name is {Name}");
             Console.WriteLine($"Cup Price is {Price} ");
-            Console.WriteLine($"Cup Quantity is {Quantity}\n");
+            Console.WriteLine($"Cup Quantity is {Quantity}");
             }
             else
             {

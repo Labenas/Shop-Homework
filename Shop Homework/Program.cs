@@ -6,31 +6,45 @@ namespace Shop_Homework
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
-            int amountOfBuying = 1;
+            int amountOfBuying = 0;
             string pureString = "a";
+            int newBalance=0;
+            int newCupQuantity=0;
 
             var cup = new Cup();
             var shop = new Shop();
+            var user = new User();
 
             cup.PrintCommands();
             cup.List();
-
+            user.ShowBalance();
             do
             {
                     shop.CommandPrep(ref amountOfBuying, ref pureString);
-
+                    
                     if (pureString == "buycup" || pureString == "cupbuy")
                     {
-                        cup.Quantity = shop.Buy(cup.Quantity, amountOfBuying);
+                        shop.Buy(cup.Quantity, amountOfBuying,user.Balance,cup.Price,ref newBalance,ref newCupQuantity);
+                        cup.Quantity = newCupQuantity;
+                        user.Balance = newBalance;
                         cup.List();
+                        user.ShowBalance();
                         cup.PrintCommandsShort();
                         Console.WriteLine("press Esc to quit console\n");
                     }
-                    else
+                    else if(pureString=="balanceup" || pureString == "upbalance")
                     {
-                        Console.WriteLine("Command you enter doesn't exist");
+                        user.BalanceUp(user.Balance,amountOfBuying);
+                        cup.List();
+                        user.ShowBalance();
+                        cup.PrintCommandsShort();
+                        Console.WriteLine("press Esc to quit console\n");
+                     }
+                    else{
+                        Console.WriteLine("\t\t\t\tCommand you enter doesn't exist\n");
                         cup.PrintCommandsShort();
                     }
                 
