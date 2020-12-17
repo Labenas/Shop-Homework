@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shop_Homework
 {
-    class Candy : BaseProperties
+    class Candy : Properties
     {
         public Candy()
         {

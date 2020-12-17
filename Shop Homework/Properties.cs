@@ -1,7 +1,7 @@
 ﻿
 namespace Shop_Homework
 {
-    public abstract class BaseProperties
+    public abstract class Properties
     {
         public int Price { get; set; }
         public string Name { get; set; }
