@@ -36,7 +36,7 @@ namespace Shop_Homework
         }
         public void PrintCommandsShort()
         {
-            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) List\n3) Add Money");
+            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) List\n3) Add Money\n");
         }
     }
 }
