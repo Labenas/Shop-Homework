@@ -56,6 +56,9 @@ namespace Shop_Homework
                 {
                     Console.WriteLine("\t\t\tMissing entry amount of items you would like to buy\n\n");
                     break;
+                }else if (amountString.Length>1)
+                {
+                    Console.WriteLine("Please enter single number\n\n");
                 }
                 else
                 {

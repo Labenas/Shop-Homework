@@ -41,7 +41,6 @@ namespace Shop_Homework
                         cup.List();
                         user.ShowBalance();
                         cup.PrintCommandsShort();
-                        Console.WriteLine("press Esc to quit console\n");
                      }
                     else{
                         Console.WriteLine("\t\t\t\tCommand you enter doesn't exist\n");

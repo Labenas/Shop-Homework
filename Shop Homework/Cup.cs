@@ -32,11 +32,11 @@ namespace Shop_Homework
         }
         public void PrintCommands()
         {
-            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) List\n3) Add Money\nExample:\n\t\t Buy Cup 50\n\t\t List\n\t\t Add Money 100\n");
+            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) Balance up\nExample:\n\t\t Buy Cup 50\n\t\t List\n\t\t Balance up 100\n");
         }
         public void PrintCommandsShort()
         {
-            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) List\n3) Add Money\n");
+            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) Balance up\n3) Key input ESC to quit\n");
         }
     }
 }
