@@ -30,9 +30,15 @@ namespace Shop_Homework
                 Console.WriteLine("Sorry we run out off Stock come back later");
             }
         }
+        public void CupUp(int CurrentQuantityCup, int IncreaseCupBy)
+        {
+            Quantity = CurrentQuantityCup + IncreaseCupBy;
+
+
+        }
         public void PrintCommands()
         {
-            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) Balance up\nExample:\n\t\t Buy Cup 50\n\t\t List\n\t\t Balance up 100\n");
+            Console.WriteLine("Aviable operations inside program: \n1) Buy ItemNAme + Quantity\n2) Balance up + Quantity \n3) Cup up + Quantity\nExample:\n\t\t Buy Cup 50\n\t\t List\n\t\t Balance up 100\n");
         }
         public void PrintCommandsShort()
         {

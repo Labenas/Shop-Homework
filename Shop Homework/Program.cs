@@ -41,6 +41,12 @@ namespace Shop_Homework
                         cup.List();
                         user.ShowBalance();
                         cup.PrintCommandsShort();
+                     }else if (pureString == "cupup" || pureString== "upcup")
+                    {
+                        cup.CupUp(cup.Quantity,amountOfBuying);
+                        cup.List();
+                        user.ShowBalance();
+                        cup.PrintCommandsShort();
                      }
                     else{
                         Console.WriteLine("\t\t\t\tCommand you enter doesn't exist\n");
